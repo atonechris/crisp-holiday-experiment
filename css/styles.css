@@ -4,14 +4,8 @@
 }
 
 body {
-    background-color: #6b92b9;
-    background-image: url('http://img138.imageshack.us/img138/5230/snowh.png'), 
-                      url('http://img594.imageshack.us/img594/9146/snow3q.png'), 
-                      url('http://img196.imageshack.us/img196/5065/snow2l.png');
-    -webkit-animation: snow 20s linear infinite;
-    -moz-animation: snow 20s linear infinite;
-    -ms-animation: snow 20s linear infinite;
-    animation: snow 20s linear infinite;
+    background-color:#fff;    
+
 }
 
 
@@ -20,6 +14,50 @@ a {
     font-style: italic;
 }
 
+/* Stage */
+
+#desktopStage{
+    width:1000px;
+    height:640px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    background-color: #006d9e;
+
+}
+
+#snowLayer{
+    width:1000px;
+    height:640px;
+     background-image: url('../images/snowh.png'), 
+                      url('../images/snow3q.png'), 
+                      url('../images/snow2l.png');
+    -webkit-animation: snow 20s linear infinite;
+    -moz-animation: snow 20s linear infinite;
+    -ms-animation: snow 20s linear infinite;
+    animation: snow 20s linear infinite;
+    position: absolute;
+    z-index: 2;
+}
+
+/* Scene 1 */
+
+#mountains{
+    background-image: url('../images/Mountains_Full.png');
+    width: 1000px;
+    height: 430px;
+    position: absolute;
+    bottom:0px;
+}
+
+#ground{
+    background-image: url('../images/ground.png');
+    width: 1000px;
+    height: 167px;
+    position: absolute;
+    bottom:0px;
+    z-index: 99;
+}
 
 /* Snowfall */
 
@@ -42,11 +80,11 @@ a {
 @-webkit-keyframes snow { 
     0% { background-position: 0px 0px, 0px 0px, 0px 0px }
 
-    50% { background-color: #b4cfe0 }
+    50% { background-color: #006d9e }
 
     100% {
         background-position: 500px 1000px, 400px 400px, 300px 300px;
-        background-color: #6b92b9;
+        background-color: #006d9e;
     }
 }
 
