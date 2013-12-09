@@ -52,6 +52,7 @@ a {
 
 #houses{
     background-image: url('../images/houses.png');
+    background-repeat: repeat-x;
     width: 1000px;
     height: 430px;
     position: absolute;
@@ -158,7 +159,7 @@ a {
 .slider {
         position: relative;
         width: 100%;
-        height: 510px;
+        height: 710px;
         overflow: hidden;
 }
         
@@ -207,20 +208,10 @@ a {
 
 
         .slider-nav {
-                position: absolute;
-                bottom: 30px;
+                display:none;
         }
 
-                .slider-nav__item {
-                        width: 12px;
-                        height: 12px;
-                        float: left;
-                        clear: none;
-                        display: block;
-                        margin: 0 5px;
-                        background: #fff;
-                }
-
+               
                                 .slider-nav__item:hover { background: #ccc; }
                                 .slider-nav__item--current { background: #ccc; }
 
