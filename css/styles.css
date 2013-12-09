@@ -50,14 +50,31 @@ a {
     bottom:0px;
 }
 
+#houses{
+    background-image: url('../images/houses.png');
+    width: 1000px;
+    height: 430px;
+    position: absolute;
+    bottom:4px;
+    z-index: 0;
+
+    -webkit-animation: houses 10s linear infinite;
+    -moz-animation: houses 10s linear infinite;
+    -ms-animation: houses10s linear infinite;
+    animation: houses 10s linear infinite;
+}
+
 #ground{
     background-image: url('../images/ground.png');
     width: 1000px;
     height: 167px;
     position: absolute;
-    bottom:0px;
+    bottom:-1px;
     z-index: 99;
 }
+
+
+
 
 /* Snowfall */
 
@@ -97,6 +114,35 @@ a {
 
 
 
+
+
+
+
+@keyframes houses { 
+    0% { background-position:  0px 0px}
+
+    100% { background-position: 3000px 0px}
+}
+
+@-moz-keyframes houses { 
+    0% { background-position: 0px 0px}
+
+    100% { background-position: 0px 0px }
+}
+
+@-webkit-keyframes houses { 
+    0% { background-position: 0px 0px}
+
+    100% { background-position: 3000px 0px }
+}
+
+@-ms-keyframes houses { 
+    0% { background-position: 0px 0px}
+
+    100% { background-position: 3000px 0px}
+}
+
+
 #container {
     width: 800px;
     margin: 200px auto;
@@ -107,3 +153,76 @@ a {
 }
 
 #container p { font: 12px/1.5 "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif }
+
+
+.slider {
+        position: relative;
+        width: 100%;
+        height: 510px;
+        overflow: hidden;
+}
+        
+        .slides {
+                height: 100%;
+                
+                /* Simple clear fix */
+                overflow: hidden;
+                
+                /**        
+                 * Prevent blinking issue
+                 * Not tested. Experimental.
+                 */
+                -webkit-backface-visibility: hidden;
+                -webkit-transform-style: preserve-3d;
+
+                /**
+                 * Here is CSS transitions 
+                 * responsible for slider animation in modern broswers
+                 */
+                -webkit-transition: all 500ms cubic-bezier(0.165, 0.840, 0.440, 1.000); 
+                   -moz-transition: all 500ms cubic-bezier(0.165, 0.840, 0.440, 1.000); 
+                    -ms-transition: all 500ms cubic-bezier(0.165, 0.840, 0.440, 1.000); 
+                     -o-transition: all 500ms cubic-bezier(0.165, 0.840, 0.440, 1.000); 
+                        transition: all 500ms cubic-bezier(0.165, 0.840, 0.440, 1.000);
+        }
+        
+                .slide {
+                        height: 100%;
+                        float: left;
+                        clear: none;
+                }
+
+
+        .slider-arrows {}
+
+                .slider-arrow {
+                        position: absolute;
+                        display: block;
+                        margin-bottom: -20px;
+                        padding: 20px;
+                }
+
+                        .slider-arrow--right { bottom: 50%; right: 30px; }
+                        .slider-arrow--left { bottom: 50%; left: 30px; }
+
+
+        .slider-nav {
+                position: absolute;
+                bottom: 30px;
+        }
+
+                .slider-nav__item {
+                        width: 12px;
+                        height: 12px;
+                        float: left;
+                        clear: none;
+                        display: block;
+                        margin: 0 5px;
+                        background: #fff;
+                }
+
+                                .slider-nav__item:hover { background: #ccc; }
+                                .slider-nav__item--current { background: #ccc; }
+
+
+

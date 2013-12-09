@@ -13,22 +13,33 @@
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
+
+    <div class="slider">
+        <ul class="slides">
+            <li class="slide">
+                <div id="desktopStage">
+                    <div id="ground"></div>    
+                    <div id="snowLayer"></div>
+                    <div id="houses"></div>
+                    <div id="mountains"></div>    
+                </div>    
+            </li>
+            <li class="slide">
+                Why did I create glide? I needed simple and fast slider with fully customizable OOCSS markup. There was actually any that would meet my needs. So it came about, Glide. It’s designed to slide. No less, no more
+        
+                </li>
+            </ul>
+        </div>
     <audio  preload autoplay>
       <source src="music/home.mp3" type="audio/mpeg" >
     There would be music playing, if your browser didn't suck! 
     </audio>
 
-    <div id="desktopStage">
-        <div id="ground"></div>    
-        <div id="snowLayer"></div>
-        <div id="mountains"></div>    
-    </div>    
-        
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script></script>
+<script src="js/glide.js"></script>
 
-
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="js/main.js"></script>
-
+<script>
+    $('.slider').glide();
+</script>
 </body>
 </html>
