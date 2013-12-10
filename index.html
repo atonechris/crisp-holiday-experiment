@@ -13,34 +13,48 @@
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
-
-    <div id="desktopStage">
-        <div id="snowLayer"></div>
-    <div class="slider">
-            <ul class="slides">
-                <li class="slide">
-                    <div id="ground"></div>    
-                    <div id="mountains"></div>    
-                </li>
-                <li class="slide">
-                    <div id="houses"></div>
-                </li>
-
-
-
-            </ul>
-        </div>
-    </div>
+    
     <audio  preload autoplay>
       <source src="music/home1.mp3" type="audio/mpeg" >
     There would be music playing, if your browser didn't suck! 
     </audio>
 
+    <div id="desktopStage">
+    <div id="snowLayer"></div>
+    <div class="slider">
+            <ul class="slides">
+
+                <li class="slide">
+                    <div id="staticHouses">
+                        <img src="images/houses.png">
+                    </div>
+                    <div id="houses"></div>
+                </li>
+
+                <li class="slide">
+                    <div id="train"></div>   
+
+                </li>
+
+                <li class="slide">
+                </li>
+            </ul>
+    </div>
+    <div id="mountains"></div> 
+    <div id="ground"></div>       
+    </div>
+
+
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script src="js/glide.js"></script>
 
 <script>
-    $('.sliader').glide();
+    $('.slider').glide({
+        autoplay: 10000,
+        nav: 'false',
+        arrows: 'false'
+
+    });
 </script> 
 </body>
 </html>

@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color:#fffdeb;    
+    background-color:#fff;    
 
 }
 
@@ -18,17 +18,19 @@ a {
 
 #desktopStage{
     width:1000px;
-    height:640px;
+    height:840px;
     margin: auto;
     position: relative;
-    overflow: hidden;
     background-color: #006d9e;
+    background-image: url('../images/Mountains_Full.png');
+    background-position: 0 10px;
+    background-repeat: no-repeat;
 
 }
 
 #snowLayer{
     width:1000px;
-    height:640px;
+    height:840px;
      background-image: url('../images/snowh.png'), 
                       url('../images/snow3q.png'), 
                       url('../images/snow2l.png');
@@ -43,27 +45,55 @@ a {
 /* Scene 1 */
 
 #mountains{
-    background-image: url('../images/Mountains_Full.png');
+    background-image: url('../images/Mountains_Full2.png');
     width: 1000px;
     height: 430px;
     position: absolute;
     bottom:0px;
+    z-index: 0;
 }
+
+.hood{
+    background-image: url('../images/houses.png');
+    background-repeat: repeat-x;
+    width: 4000px;
+    height: 263px;
+    position: absolute;
+    bottom: 219px;
+    z-index: 3;
+}
+
 
 #houses{
     background-image: url('../images/houses.png');
     background-repeat: repeat-x;
-    width: 1000px;
-    height: 430px;
+    width: 4000px;
+    height: 263px;
     position: absolute;
-    bottom:4px;
-    z-index: 0;
-
+    bottom: 219px;
+    z-index: 3;
     -webkit-animation: houses 10s linear infinite;
     -moz-animation: houses 10s linear infinite;
     -ms-animation: houses10s linear infinite;
     animation: houses 10s linear infinite;
 }
+
+
+#train{
+    background-image: url('../images/train.png');
+    background-repeat: repeat-x;
+    width: 3000px;
+    height: 140px;
+    position: absolute;
+    bottom: 200px;
+    z-index: 4;
+    -webkit-animation: train 6s linear infinite;
+    -moz-animation: train 6s linear infinite;
+    -ms-animation: train 6s linear infinite;
+    animation: train 6s linear infinite;
+}
+
+
 
 #ground{
     background-image: url('../images/ground.png');
@@ -75,7 +105,11 @@ a {
 }
 
 
-
+#staticHouses{
+    height:600px;
+    position: absolute;
+    bottom:10px;
+}
 
 /* Snowfall */
 
@@ -98,11 +132,8 @@ a {
 @-webkit-keyframes snow { 
     0% { background-position: 0px 0px, 0px 0px, 0px 0px }
 
-    50% { background-color: #006d9e }
-
     100% {
         background-position: 500px 1000px, 400px 400px, 300px 300px;
-        background-color: #006d9e;
     }
 }
 
@@ -120,9 +151,9 @@ a {
 
 
 @keyframes houses { 
-    0% { background-position:  0px 0px}
+    0% { background-position:  -3000px 0px}
 
-    100% { background-position: 3000px 0px}
+    100% { background-position: 0px 0px}
 }
 
 @-moz-keyframes houses { 
@@ -144,22 +175,38 @@ a {
 }
 
 
-#container {
-    width: 800px;
-    margin: 200px auto;
-    text-align: center;
-    color: white;
-    font: 100px/1 'Spirax', cursive;
-    text-shadow: 0px 0px 4px rgba(0,0,0, 0.5);
+
+
+@keyframes train { 
+    0% { background-position:  0px 0px}
+
+    100% { background-position: 3000px 0px}
 }
 
-#container p { font: 12px/1.5 "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif }
+@-moz-keyframes train { 
+    0% { background-position: 0px 0px}
+
+    100% { background-position: 0px 0px }
+}
+
+@-webkit-keyframes train { 
+    0% { background-position: 0px 0px}
+
+    100% { background-position: 3000px 0px }
+}
+
+@-ms-keyframes train { 
+    0% { background-position: 0px 0px}
+
+    100% { background-position: 3000px 0px}
+}
+
 
 
 .slider {
         position: relative;
-        width: 100%;
-        height: 710px;
+        width: 1000px;
+        height: 840px;
         overflow: hidden;
 }
         
@@ -185,35 +232,13 @@ a {
                     -ms-transition: all 500ms cubic-bezier(0.165, 0.840, 0.440, 1.000); 
                      -o-transition: all 500ms cubic-bezier(0.165, 0.840, 0.440, 1.000); 
                         transition: all 500ms cubic-bezier(0.165, 0.840, 0.440, 1.000);
+
         }
         
                 .slide {
-                        height: 100%;
                         float: left;
                         clear: none;
+                        width:1000px;
+                        height: 640px;
                 }
-
-
-        .slider-arrows {}
-
-                .slider-arrow {
-                        position: absolute;
-                        display: block;
-                        margin-bottom: -20px;
-                        padding: 20px;
-                }
-
-                        .slider-arrow--right { bottom: 50%; right: 30px; }
-                        .slider-arrow--left { bottom: 50%; left: 30px; }
-
-
-        .slider-nav {
-                display:none;
-        }
-
-               
-                                .slider-nav__item:hover { background: #ccc; }
-                                .slider-nav__item--current { background: #ccc; }
-
-
 
