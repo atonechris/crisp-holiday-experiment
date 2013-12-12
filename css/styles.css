@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color:#005c84;    
+    background-color:#fff;    
 
 }
 
@@ -21,7 +21,6 @@ a {
     height:840px;
     margin: auto;
     position: relative;
-    background-color: #006d9e;
     background-image: url('../images/Mountains_Full.png');
     background-position: 0 10px;
     background-repeat: no-repeat;
@@ -42,15 +41,41 @@ a {
     z-index: 2;
 }
 
+#fog{
+    background-repeat: repeat-y;
+    background-position: 0% 50%, 0;
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    top: 100px;
+    width: 1000px;
+    height: 584px;
+    overflow: hidden;
+    background: url('../images/cloud.png');
+    -webkit-animation: slide 60s linear infinite; 
+    
+}
+
+@-webkit-keyframes slide {
+    from{
+        background-position:1725px 0px;
+    }
+    to{
+        background-position:0px 0px;
+    }
+}
+
+
 /* Scene 1 */
 
 #mountains{
     background-image: url('../images/Mountains_Full2.png');
     width: 1000px;
-    height: 343px;
+    height: 500px;
     position: absolute;
-    bottom:0px;
+    bottom:-10px;
     z-index:1;
+    background-repeat: no-repeat;
 }
 
 .hood{
@@ -63,6 +88,7 @@ a {
     z-index: 3;
 }
 
+/* Be Careful Who You Dismiss */
 
 #houses{
     background-image: url('../images/houses.png');
@@ -79,21 +105,21 @@ a {
 }
 
 
-#train{
-    background-image: url('../images/train.png');
+#walking{
+    background-image: url('../images/walking.png');
     background-repeat: repeat-x;
-    width: 3000px;
+    width: 1000px;
     height: 140px;
     position: absolute;
-    bottom: 200px;
+    bottom: 46px;
     z-index: 4;
-    -webkit-animation: train 6s linear infinite;
-    -moz-animation: train 6s linear infinite;
-    -ms-animation: train 6s linear infinite;
-    animation: train 6s linear infinite;
+    -webkit-animation: train 60s linear infinite;
+    -moz-animation: train 60s linear infinite;
+    -ms-animation: train 60s linear infinite;
+    animation: train 60s linear infinite;
 }
 
-
+/* Treat Everyone With Respect */
 
 #ground{
     background-image: url('../images/ground.png');
@@ -101,7 +127,7 @@ a {
     height: 167px;
     position: absolute;
     bottom:-1px;
-    z-index: 99;
+    z-index: 5;
 }
 
 
@@ -109,6 +135,102 @@ a {
     height:600px;
     position: absolute;
     bottom:10px;
+}
+
+#header{
+    top: 60px;
+    position: absolute;
+}
+
+#subHead{
+    position: absolute;
+    top: 727px;
+    z-index: 7;
+
+}
+
+#divider1{
+    background-image:url('../images/div.png');
+    background-repeat: no-repeat;
+    width: 1000px;
+    height:52px;
+    top:15px;
+    position: absolute;
+    z-index: 10px;
+}
+
+
+/* Or People Will Take It From You */
+
+
+#divider2{
+    background-image:url('../images/div.png');
+    background-repeat: no-repeat;
+    width: 1000px;
+    height:52px;
+    top:782px;
+    position: absolute;
+    z-index: 10;
+}
+
+#divider3{
+    background-image:url('../images/div.png');
+    background-repeat: no-repeat;
+    width: 1000px;
+    height:52px;
+    top:959px;
+    position: absolute;
+    z-index: 10;
+}
+
+#divider4{
+    background-image:url('../images/divSingle.png');
+    background-repeat: no-repeat;
+    width: 1000px;
+    height:52px;
+    top:1661px;
+    position: absolute;
+    z-index: 10;
+}
+
+
+#divider4{
+    background-image:url('../images/divSingle.png');
+    background-repeat: no-repeat;
+    width: 1000px;
+    height:52px;
+    top: 1640px;
+    position: absolute;
+    z-index: 10;
+}
+
+#divider5{
+    background-image:url('../images/divSingle.png');
+    background-repeat: no-repeat;
+    width: 1000px;
+    height:52px;
+    top:1711px;
+    position: absolute;
+    z-index: 10;
+}
+
+
+#clients{
+    position: absolute;
+    top: 1648px;
+    width: 1000px;
+    height: 136px;
+}
+
+
+#reef{
+    position: absolute;
+    left: 387px;
+    top:0;
+    z-index: 98;
+    width:245px;
+    height: 77px;
+    background-image: url('../images/reef.png');
 }
 
 @charset "utf-8";
@@ -123,7 +245,7 @@ body {
     left:0;
     right:0;
     bottom:0;
-    background-color:#005c84; /* change if the mask should have another color then white */
+    background-color:#fff; /* change if the mask should have another color then white */
     z-index:99; /* makes sure it stays on top */
 }
 
@@ -140,7 +262,136 @@ body {
 }
 
 
-/* Snowfall */
+
+/* Content */
+
+#expl{
+    width:1000px;
+    position: absolute;
+    top:828px;
+    font-family: 'Georgia', sans-serif;
+    color: #888;
+    font-size: 15px;
+    text-align: justify;
+    text-justify: full;
+}
+
+#showcase{
+    width:1000px;
+    position: absolute;
+    top:1006px;
+    font-family: 'Georgia', serif;
+    color: #888;
+    font-size: 15px;
+    text-align: justify;
+    text-justify: full;
+}
+
+
+.title{
+    color: #2b5b88;
+    font-size: 41px;
+}
+
+#text1{
+    width: 764px;
+    float: left;
+    padding-top: 7px;
+    line-height: 26px;
+}
+
+#text2{
+    width: 489px;
+    float: right;
+    padding-top: 137px;
+    line-height: 26px;
+}
+
+#adShowcase{
+    width: 515px;
+    height: 650px;
+    background-image: url('../images/phones.png');
+    background-repeat: no-repeat;
+    float:left;
+
+}
+
+#text2{
+    width: 485px;
+    float: right;
+    padding-top: 125px;
+    line-height: 26px;
+}
+
+#text2 img{
+    text-align: right;
+}
+
+
+#button{
+    width: 234px;
+    float: right;
+    text-align: right;
+    padding-top: 35px;
+
+}
+
+#newsContainer{
+    position: absolute;
+    top: 1820px;
+    width: 1000px;
+    height:100px;
+}
+
+#newsItem{
+    width:309px;
+    float: left;
+    margin-right: 30px;
+    text-align: justify;
+    text-justify:full;
+
+}
+
+#newsItemL{
+    width:322px;
+    float: left;
+
+}
+
+
+#newsContainer .newsTitle{
+    color: #737373;
+    font-family: 'Georgia', serif;
+    font-size: 21px;
+    line-height: 30px;
+}
+
+#newsContainer .newsBody{
+    color: #b0b0b0;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+#newsContainer img{
+    float: right;
+}
+
+.clear{
+    clear: both;
+}
+
+
+/* Footer */
+#footer{
+    top: 2168px;
+    position: absolute;
+    width:100%;
+    height:300px;
+    background-color: #2b5b88;
+}
+
+/* Animations */
 
 
 
@@ -171,11 +422,6 @@ body {
 
     100% { background-position: 500px 1000px, 400px 400px, 300px 300px }
 }
-
-
-
-
-
 
 
 
@@ -230,44 +476,4 @@ body {
     100% { background-position: 3000px 0px}
 }
 
-
-
-.slider {
-        position: relative;
-        width: 1000px;
-        height: 840px;
-        overflow: hidden;
-}
-        
-        .slides {
-                height: 100%;
-                
-                /* Simple clear fix */
-                overflow: hidden;
-                
-                /**        
-                 * Prevent blinking issue
-                 * Not tested. Experimental.
-                 */
-                -webkit-backface-visibility: hidden;
-                -webkit-transform-style: preserve-3d;
-
-                /**
-                 * Here is CSS transitions 
-                 * responsible for slider animation in modern broswers
-                 */
-                -webkit-transition: all 500ms cubic-bezier(0.165, 0.840, 0.440, 1.000); 
-                   -moz-transition: all 500ms cubic-bezier(0.165, 0.840, 0.440, 1.000); 
-                    -ms-transition: all 500ms cubic-bezier(0.165, 0.840, 0.440, 1.000); 
-                     -o-transition: all 500ms cubic-bezier(0.165, 0.840, 0.440, 1.000); 
-                        transition: all 500ms cubic-bezier(0.165, 0.840, 0.440, 1.000);
-
-        }
-        
-                .slide {
-                        float: left;
-                        clear: none;
-                        width:1000px;
-                        height: 640px;
-                }
 
