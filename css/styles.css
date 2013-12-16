@@ -1,3 +1,33 @@
+/* Media Queries */
+
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+
+    body{
+        background: black;
+    }
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+
+    body{
+        background: blue;
+    }
+
+}
+
+
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -140,6 +170,10 @@ a {
 #header{
     top: 60px;
     position: absolute;
+    background-image: url('../images/header.png');
+    background-repeat: no-repeat;
+    height: 152px;
+    width: 999px;
 }
 
 #subHead{
@@ -391,9 +425,10 @@ body {
     background-color: #2b5b88;
 }
 
+
+
+
 /* Animations */
-
-
 
 /*Keyframes*/
 
