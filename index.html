@@ -1,15 +1,200 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> 
-<html class="no-js"> <!--<![endif]-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Happy Holidays from Crisp Media</title>
-
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/styles.css">
+        <style type="text/css">
+		/* Phone */
+		@media screen and (max-width: 460px) {
+			#reef{
+				left:48px;
+				top:-14px;
+				
+			}
+	
+			#desktopStage{
+			    width:450px;
+			    height:840px;
+			    margin: auto;
+			    position: relative;
+			    background-image: url('images/Mountains_Full.png');
+			    background-position: 0 10px;
+			    background-repeat: no-repeat;
+			}
+			
+			#walking{
+		
+			    bottom:  105px;
+			}
+			
+			#header{
+			    top: 83px;
+			    left: 22px;
+			    position: absolute;
+			    background: url('images/headerPhone.png');
+			    background-repeat: no-repeat;
+			    height: 178px;
+			    width:400px;
+			}
+			
+			#ground{
+				bottom: 13px;
+
+			}
+			
+			#divider3, #divider4{
+				visibility: hidden;
+			}
+			
+			#subHead{
+			    top: 668px;
+			    left: 21px;
+				z-index: 99;
+			    position: absolute;
+			    background: url('images/subheaderPhone.png');
+			    background-repeat: no-repeat;
+			    height: 143px;
+			    width:282px;
+			}
+			
+			#adShowcase {
+				background-size: 65%;
+			}
+			
+
+			#text1 {
+				width: 277px;
+				float: left;
+				padding-top: 7px;
+				line-height: 26px;
+				padding-left: 22px;
+			}
+
+			
+			#snowlayer{
+				width:480px; 
+			}
+			
+				#button{
+				position:absolute;
+				top:133px;
+				clear:both;
+				left: 15px;
+			}
+			
+			
+			
+		}
+
+		/* min-width & max-width */
+		@media screen and (min-width: 461px) and (max-width: 900px) {
+			#header{
+			    top: 84px;
+			    left: 5px;
+			    position: absolute;
+			    background: url('images/headerPad.png');
+			    background-repeat: no-repeat;
+			    overflow: hidden;
+			    height: 115px;
+			    width: 760px;
+			}
+			
+			#reef{
+				left: 270px;
+				
+			}
+			
+			#showcase{
+				text-align: left;
+			}
+			
+			
+			.title{
+				line-height:40px;
+			}
+			
+			
+			
+			#button{
+			}
+			
+			#brands{
+				width:760px;
+				overflow: hidden;
+			}
+	
+			#text1 {
+				width: 740px;
+				float: left;
+				padding-top: 7px;
+				line-height: 26px;
+				padding-left: 22px;
+			}
+			
+			#text2 {
+				width: 245px;
+				float: left;
+				padding-top: 2px;
+				line-height: 26px;
+			}
+			
+			#subHead{
+			    top: 738px;
+			    left: 11px;
+				z-index: 99;
+			    position: absolute;
+			    background: url('images/subheaderPad.png');
+			    background-repeat: no-repeat;
+			    height: 143px;
+			    width:760px;
+			}
+
+			#newsItem{
+				margin-left: 16px;
+				width: 337px;
+				
+			}
+
+
+			#newsItemL{
+			    visibility: hidden;
+			
+			}
+			
+			#snowLayer {
+				width: 900px;
+				height: 840px;
+				background-image: 
+				url('../images/snowh.png'), 
+				url('../images/snow3q.png'), 
+				url('../images/snow2l.png');
+				-webkit-animation: snow 20s linear infinite;
+				-moz-animation: snow 20s linear infinite;
+				-ms-animation: snow 20s linear infinite;
+				animation: snow 20s linear infinite;
+				position: absolute;
+				z-index: 2;
+				}
+			
+			
+			
+		}
+
+		/* max device width */
+		@media screen and (max-device-width: 480px) {
+			.iphone {
+				background: #ccc;
+			}
+		}
+</style>
+
+        
     </head>
     <body>
     <div id="preloader">
@@ -17,7 +202,7 @@
     </div>
 
     <audio  preload autoplay>
-        <source src="music/home.mp3" type="audio/mpeg" >
+        <source src="music/home.mp3" type="audios/mpeg" >
         There would be music playing, if your browser didn't suck! 
     </audio>
 
@@ -26,16 +211,15 @@
     <div id="snowLayer"></div>
     <div id="reef"></div>
     <div id="fog"></div>
-    <div id="header"></div>
+    <div id="header">
+    </div>
 
     <div id="walking"></div>
 
  
     <div id="ground"></div>       
     
-    <div id="subHead">
-        <img src="images/subHead.png">
-    </div>
+    <div id="subHead"></div>
 
    
      <div id="divider1"></div>
@@ -43,7 +227,7 @@
 
     <div id="expl">
         <div id="text1">
-            Crisp Media is a leading provider of premium mobile advertising technology, media and services to brand advertisers, agencies and publishers. Crisp’s mobile advertising platform, Crisp Engage™, enables the development of engaging and effective mobile rich media creative units, serves campaigns across all devices and OS types, and provides detailed analytics to inform campaign optimization and success. Crisp’s media offering, Crisp Premium Media™, offers targeted channels of brand-safe, premium mobile inventory with scale. 
+            Crisp Media is a leading provider of premium mobile advertising technology, media and services to brand advertisers, agencies and publishers.
         </div>
        
 
@@ -56,13 +240,12 @@
 
     <div class="clear"></div>
 
-    <div id="divider3"></div>
+  <!--  <div id="divider3"></div>
 
     <div id="showcase">
         <div id="adShowcase"></div>
         <div id="text2">
             <span class="title">Recent Ad Showcase</span>
-            <br />
             <br />
             Crisp is a founding member of the Open Rich Media for Mobile Advertising (ORMMA) specifications group, which helped to define the widely accepted MRAID standards now established by the IAB. The company has a proven track record of success, working with publishers like CBS, CNN, Hearst Magazines, Bonnier, Meredith, IGN, Rodale and The Wall Street Journal Digital Network, and with leading brands including General Motors, Toyota, Volkswagen, Intel, Hewlett Packard, Proctor and Gamble, Porsche, Unilever, Coca-Cola, American Express and Paramount Pictures. 
             <br />
@@ -78,7 +261,7 @@
     <div id="divider4"></div>
     
     <div id="clients">
-        <span class="title" style="float:right;">
+        <div class="title" id="brands">
             Selected Client List
         </span>
         <img src="images/brand.png" border="0">    
@@ -153,9 +336,10 @@
 
 
 
-
+    -->
 
     </div>
+
 
 <div id="footer">
 

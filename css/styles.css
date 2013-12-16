@@ -2,31 +2,6 @@
 
 
 
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
-
-    body{
-        background: black;
-    }
-
-}
-
-/* iPads (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) {
-
-    body{
-        background: blue;
-    }
-
-}
-
-
-
-
 
 * {
     margin: 0;
@@ -177,9 +152,13 @@ a {
 }
 
 #subHead{
+  	background-image: url('../images/subhead.png');
+    background-repeat: no-repeat;
     position: absolute;
     top: 727px;
     z-index: 7;
+    width: 969px;
+    height: 47px;
 
 }
 
@@ -254,6 +233,7 @@ a {
     top: 1648px;
     width: 1000px;
     height: 136px;
+    text-align: right;
 }
 
 
@@ -334,12 +314,6 @@ body {
     line-height: 26px;
 }
 
-#text2{
-    width: 489px;
-    float: right;
-    padding-top: 137px;
-    line-height: 26px;
-}
 
 #adShowcase{
     width: 515px;
@@ -366,13 +340,12 @@ body {
     width: 234px;
     float: right;
     text-align: right;
-    padding-top: 35px;
+    padding-top: 10px;
 
 }
 
 #newsContainer{
     position: absolute;
-    top: 1820px;
     width: 1000px;
     height:100px;
 }
